@@ -1,0 +1,14 @@
+
+CREATE TABLE passenger (
+  id          BIGSERIAL PRIMARY KEY,
+  create_time TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
+  update_time TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
+  pax_code VARCHAR(100) NOT NULL,
+  pax_name VARCHAR(100) NOT NULL,
+  tag1 VARCHAR(1024),
+  tag2 JSONB,
+  tag3 VARCHAR(1024),
+  tag4 JSONB,
+  address VARCHAR(1024),
+  consignee JSONB
+)
