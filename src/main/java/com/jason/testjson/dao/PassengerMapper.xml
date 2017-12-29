@@ -10,6 +10,7 @@
         <result property="tag2" column="tag2" typeHandler="MapJsonTypeHandler"/>
         <result property="tag3" column="tag3" typeHandler="MapStringTypeHandler"/>
         <result property="tag4" column="tag4" typeHandler="MapJsonTypeHandler"/>
+        <result property="tag6" column="tag6" typeHandler="ListAddressTypeHandler"/>
         <result property="address" column="address" typeHandler="AddressTypeHandler"/>
         <result property="consignee" column="consignee" typeHandler="ConsigneeTypeHandler"/>
         <result property="createTime" column="create_time" />
@@ -22,7 +23,7 @@
 
     <insert id="save" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO passenger
-            (pax_code, pax_name, tag1, tag2, tag3, tag4, address, consignee)
+            (pax_code, pax_name, tag1, tag2, tag3, tag4, tag6, address, consignee)
         VALUES (
             '${paxCode}',
             '${paxName}',
@@ -30,6 +31,7 @@
             #{tag2, typeHandler=MapJsonTypeHandler},
             #{tag3, typeHandler=MapStringTypeHandler},
             #{tag4, typeHandler=MapJsonTypeHandler},
+            #{tag6, typeHandler=ListAddressTypeHandler},
             #{address, typeHandler=AddressTypeHandler},
             #{consignee, typeHandler=ConsigneeTypeHandler}
         )

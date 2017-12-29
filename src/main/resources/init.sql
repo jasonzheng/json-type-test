@@ -9,6 +9,8 @@ CREATE TABLE passenger (
   tag2 JSONB,
   tag3 VARCHAR(1024),
   tag4 JSONB,
+  tag5 VARCHAR(1024),
+  tag6 JSONB,
   address VARCHAR(1024),
   consignee JSONB
 )

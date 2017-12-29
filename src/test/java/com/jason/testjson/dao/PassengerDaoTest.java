@@ -45,14 +45,22 @@ public class PassengerDaoTest {
         passenger.setTag1(tag);
         passenger.setTag2(tag);
 
-        Address address = new Address("China", "Beijing", "Beijing", "7 Yunmin Av.,Houshayu, Shunyi Dist.",
-                "jason");
-        passenger.setTag3(address);
-        passenger.setAddress(address);
+        Address address1 = new Address("China", "Beijing", "Beijing", "7 Yunmin Av.,Houshayu, Shunyi Dist.",
+                "jason1");
+        passenger.setTag3(address1);
+        passenger.setAddress(address1);
 
         Consignee consignee = new Consignee("jason", null, "zheng", "jason zheng");
         passenger.setTag4(consignee);
         passenger.setConsignee(consignee);
+
+        Address address2 = new Address("China", "Shanghai", "Shanghai", "7 Yunmin Av.,Houshayu, Shunyi Dist.",
+                "jason2");
+        List<Address> addressArrayList = new ArrayList<>();
+        addressArrayList.add(address1);
+        addressArrayList.add(address2);
+        passenger.setTag6(addressArrayList);
+
         passengerDao.save(passenger);
         System.out.println(passenger);
     }
@@ -72,7 +80,9 @@ public class PassengerDaoTest {
     @Test
     public void findAllTest() {
         List <Passenger> passengers = passengerDao.findAll();
-        System.out.println(passengers);
+        for ( Passenger passenger: passengers ) {
+            printData(passenger);
+        }
     }
 
     private void printData(Passenger passenger) {
@@ -92,6 +102,11 @@ public class PassengerDaoTest {
 
         System.out.println("Tag4:");
         System.out.println(passenger.getTag4());
+
+        System.out.println("Tag6:");
+        for ( Address address: passenger.getTag6() ) {
+            System.out.println(address);
+        }
     }
 
     private void printMap(Map<String, Object> map) {

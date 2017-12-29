@@ -4,6 +4,7 @@ import com.jason.testjson.utils.JsonUtils;
 import lombok.Data;
 
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -36,6 +37,16 @@ public class Passenger {
      **测试对象存储为json，数据库类型为jsonb，使用map转换
      **/
     private Consignee tag4;
+
+    /**
+     **测试List对象存储为json，数据库类型为VARCHAR
+     **/
+    private List<Address> tag5;
+
+    /**
+     **测试List对象存储为json，数据库类型为jsonb
+     **/
+    private List<Address> tag6;
 
     /**
      **测试对象存储为json，数据库类型为VARCHAR
