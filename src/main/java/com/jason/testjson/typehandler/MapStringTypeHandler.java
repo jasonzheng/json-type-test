@@ -1,4 +1,4 @@
-package com.jason.testjson.handler;
+package com.jason.testjson.typehandler;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package com.jason.testjson.handler;
+package com.jason.testjson.typehandler;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

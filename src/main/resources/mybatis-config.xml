@@ -5,11 +5,11 @@
 <configuration>
     <typeAliases>
         <package name="com.jason.testjson.model"/>
-        <package name="com.jason.testjson.handler"/>
+        <package name="com.jason.testjson.typehandler"/>
     </typeAliases>
 
     <typeHandlers>
-        <package name="com.jason.testjson.handler" />
+        <package name="com.jason.testjson.typehandler" />
     </typeHandlers>
 
 </configuration>
